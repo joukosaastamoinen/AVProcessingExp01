@@ -3,7 +3,7 @@ import ddf.minim.*;
 int windowWidth = 1000;
 int windowHeight = 600;
 
-float waveformHeight = windowHeight;
+float waveformHeight = 400;
 
 Minim minim;
 AudioInput in; 
@@ -28,7 +28,7 @@ void draw()
   {
     int x1 = i * windowWidth / bufferSize;
     int x2 = (i + 1) * windowWidth / bufferSize;
-    line( x1, windowHeight - in.left.get(i)*waveformHeight, x2, windowHeight - in.left.get(i+1)*waveformHeight );
+    line( x1, (windowHeight - in.left.get(i)*waveformHeight) / 2, x2, (windowHeight - in.left.get(i+1)*waveformHeight) / 2);
   }  
 }
 
